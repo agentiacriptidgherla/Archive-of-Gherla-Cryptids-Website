@@ -11,18 +11,20 @@
   <div class="navbar">
       <img src="assets/gif-negru.gif" alt="COD SECRET AICIA" class="logo">
       <div class="links">
-          <a href="#">Meniu principal</a>
-          <a href="#">Baza de date</a>
-          <a href="#">Raportare Cryptid</a>
-          <a href="#">Lista Personal</a>
+          <a href="index.html">Meniu principal</a>
+          <a href="pages/database.html" onclick="return linkCheck()">Baza de date</a>
+          <a href="pages/reports.html" onclick="return linkCheck()">Raportare Cryptid</a>
+          <a href="pages/personnel.html" onclick="return linkCheck()">Lista Personal</a>
       </div>
-      <a href="#">Contactați-ne</a>
+      <a href="pages/contact" onclick="return linkCheck()">Contactați-ne</a>
   </div>
   <img src="assets/logo-alb.png" alt="" class="background-logo">
   <div class="alert">
       <div>
-        <h1>Atenție!</h1>
-        <h2>Accesul la acest site este interzis persoanelor care nu fac parte din cadrul instituției.
+        <div class="glitch title" data-glitch="Atentie!">
+          Atenție!
+        </div>
+        <h2 class="subtitle">Accesul la acest site este interzis persoanelor care nu fac parte din cadrul instituției.
       <br>Doar personalul autorizat are permisiunea să vizualizeze acest conținut.</h2>
       </div>
       <div>
@@ -31,8 +33,22 @@
         <br>AGC oferă instrucțiuni detaliate și recomandări pentru utilizarea acestui site, pentru navigarea în zonele cunoscute pentru apartenența criptidului. Materialele vor fi actualizate constant pentru a asigura protecția și supraviețuirea personalului.
         <p>Toate informațiile prezentate aici sunt strict confidențiale. Orice divulgare sau folosire necorespunzătoare a conținutului va fi sancționată conform reglementărilor instituției.</p>
       </div>
-      <button class="login-button" onclick="alert('ASKJFHKJE FNMANICVL ejH## 39 7*!#U$!@B()')">LOGHEAZĂ-TE</button>
+      <button class="login-button">LOGHEAZĂ-TE</button>
+      <div id="retroModal" class="retro-modal">
+        <div class="retro-modal-content">
+          <span class="retro-close" onclick="closeRetroModal()">&times;</span>
+          <h2 class="retro-title">LOGIN</h2>
+          <form onsubmit="return validateForm()" class="retro-form" name="myForm">
+            <label for="username">Utilizator:</label>
+            <input type="text" id="username" name="username" autocomplete="off">
+            <label for="password">Parolă:</label>
+            <input type="password" id="password" name="password">
+            <button type="submit" class="retro-submit">Autentificare</button>
+          </form>
+        </div>
+      </div>
   </div>
+  <div class="noise"></div>
 </body>
 <script src="script.js"></script>
 </html>
