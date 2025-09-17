@@ -921,3 +921,154 @@ p {
 .retro-submit:hover {
   background: #dddddd;
 }
+
+.contact-retro-box {
+   background: linear-gradient(135deg, #222 80%, #444 100%);
+   color: #ededed;
+   border: 4px solid #ededed;
+   box-shadow: 0 0 30px #ededed, 0 0 10px #222 inset;
+   margin: 40px auto 20px auto;
+   padding: 30px 40px;
+   width: clamp(280px, -4.39189189189rem + 97.2972972973vw, 1000px);
+   border-radius: 8px;
+   position: relative;
+   text-align: left;
+   font-family: 'Courier New', Courier, monospace;
+   z-index: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.contact-list {
+   display: flex;
+   flex-direction: column;
+   align-items: left;
+   list-style: none;
+   padding: 0;
+}
+.contact-list li {
+   display: flex;
+   align-items: center;
+   margin: 12px 0;
+}
+.contact-icon {
+   width: clamp(18px, 0.39rem + 3.26vw, 34px);
+   height: auto;
+   fill: #ededed;
+   margin-right: 18px;
+   filter: drop-shadow(0 0 4px #ededed);
+}
+.contact-link {
+   font-size: clamp(0.85rem, 0.445rem + 1.795vw, 1.4rem);
+   color: #00ff99;
+   text-decoration: none;
+   font-family: inherit;
+   font-weight: bold;
+   text-shadow: 0 0 8px #00ff99;
+   transition: color 0.2s;
+}
+.contact-link:hover {
+   color: #ededed;
+   text-shadow: 0 0 8px #ededed;
+}
+
+.confirmation-modal {
+   text-align: center;
+   color: #ededed;
+   border: 4px solid #ededed;
+   box-shadow: 0 0 30px #ededed, 0 0 10px #222 inset;
+   position: absolute;
+   top: 55%; /* Adjusted for better visibility */
+   left: 50%;
+   transform: translate(-50%, -50%); /* Center the image */
+   padding: 30px 40px;
+   width: clamp(280px, -4.39189189189rem + 97.2972972973vw, 1000px);
+   border-radius: 8px;
+   font-family: 'Courier New', Courier, monospace;
+   background: linear-gradient(135deg, #222 80%, #444 100%);
+   z-index: 1001;
+   display: none;
+   align-items: center;
+   justify-content: center;
+}
+
+.confirmation-text{
+   font-size: clamp(1rem, 0.445rem + 1.795vw, 2rem);
+}
+
+.personnel-content {
+   display: flex;
+   justify-content: center;
+   overflow-y: scroll;
+   background: linear-gradient(135deg, #222 80%, #444 100%);
+   color: #ededed;
+   border: 4px solid #ededed;
+   box-shadow: 0 0 30px #ededed, 0 0 10px #222 inset;
+   width: clamp(300px, -4.39189189189rem + 97.2972972973vw, 700px);
+   border-radius: 8px;
+   margin: 40px auto 40px auto;
+   position: relative;
+   height: auto;
+   max-height: 400px;
+}
+
+.personnel-items {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+.personnel-item {
+   padding: 20px 15px;
+   font-family: 'Courier New', Courier, monospace;
+   display: flex;
+   gap: 20px;
+   z-index: 0;
+}
+
+.personnel-icon {
+   width: 35px;
+   height: auto;
+   fill: #ededed;
+   margin-right: 10px;
+   filter: drop-shadow(0 0 4px #ededed);
+}
+
+.personnel-info {
+   display: flex;
+   flex-direction: column;
+   align-items: left;
+   text-align: left;
+}
+
+.personnel-info p:nth-of-type(1) {
+   font-size: clamp(0.8rem, 0.445rem + 1.795vw, 1.4rem);
+   font-family: inherit;
+   font-weight: bold;
+   text-shadow: 0 0 8px #ededed;
+   margin: 0;
+}
+
+.personnel-info p:nth-of-type(2) {
+   font-size: clamp(0.6rem, -0.09rem + 2.18vw, 1rem);
+   font-family: inherit;
+   font-weight: normal;
+   text-shadow: 0 0 8px #ededed;
+   margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+   .personnel-items {
+      align-items: center;
+      text-align: center;
+   }
+   .personnel-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+   }
+   .personnel-info {
+      align-items: center;
+      text-align: center;
+   }
+}
