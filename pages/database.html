@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6DK4Y5Z3B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z6DK4Y5Z3B');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../assets/logo-alb.png" type="image/x-icon">
+  <title>Archive of Gherla Cryptids</title>
+</head>
+<body>
+  <div class="navbar">
+      <img src="../assets/gif-negru.gif" class="logo">
+      <div class="links">
+          <a href="../index.html">Meniu principal</a>
+          <a href="#">Bază de date</a>
+          <a href="./reports.html">Raportare Cryptid</a>
+          <a href="./personnel.html">Listă Personal</a>
+      </div>
+      <a href="./contact.html">Contact</a>
+  </div>
+  <img src="../assets/logo-alb.png" alt="" class="background-logo">
+  <div class="cryptid-grid">
+    <div class="cryptid-left">
+      <div class="cryptid-select cryptid-modal" id="cryptidSelectMenu">
+        <h2 class="retro-title">Selectează un Cryptid</h2>
+        <div class="cryptid-icons">
+          <img src="../assets/001.jpeg" alt="Cryptid 1" class="cryptid-icon" onclick="selectCryptid(0)">
+          <img src="../assets/002.jpeg" alt="Cryptid 2" class="cryptid-icon" onclick="selectCryptid(1)">
+          <img src="../assets/003.png" alt="Ⱀ➵Ⱌ⇦⏙⧺ⴎ" class="cryptid-icon" onclick="selectCryptid(2)">
+        </div>
+      </div>
+      <button class="show-cryptid-menu-btn" id="showCryptidMenuBtn" onclick="toggleCryptidMenu()">Alege Cryptid</button>
+      <div class="cryptid-data cryptid-modal" id="cryptidData">
+        <h3 id="cryptidName">Nume: -</h3>
+        <p id="cryptidType">Tip: -</p>
+        <p id="cryptidIncidents">Incidente: <a href="">-</a></p>
+        <p id="cryptidStatus">Status: -</p>
+        <p id="cryptidRisk">Nivel risc: -</p>
+      </div>
+    </div>
+    <div class="cryptid-right cryptid-modal">
+      <div id="cryptidPhotoBox">
+        <img id="cryptidPhoto" src="../assets/logo-alb.png" alt="Cryptid" class="cryptid-photo">
+      </div>
+      <div id="cryptidDescription" class="cryptid-description">
+        <p>Selectează un cryptid pentru detalii.</p>
+      </div>
+    </div>
+  </div>
+  <div class="noise"></div>
+  <script src="../scripts/script.js"></script>
+  <script src="../scripts/database.js"></script>
+</body>
+</html>
