@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6DK4Y5Z3B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z6DK4Y5Z3B');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
@@ -9,23 +17,21 @@
 </head>
 <body>
   <div class="navbar">
-      <img src="assets/gif-negru.gif" alt="COD SECRET AICIA" class="logo">
+      <img src="assets/gif-negru.gif" alt="" class="logo">
       <div class="links">
-          <a href="index.html">Meniu principal</a>
+          <a href="#">Meniu principal</a>
           <a href="pages/database.html" onclick="return linkCheck()">Baza de date</a>
           <a href="pages/reports.html" onclick="return linkCheck()">Raportare Cryptid</a>
           <a href="pages/personnel.html" onclick="return linkCheck()">Lista Personal</a>
       </div>
-      <a href="pages/contact" onclick="return linkCheck()">Contactați-ne</a>
+      <a href="pages/contact.html" onclick="return linkCheck()">Contact</a>
   </div>
   <img src="assets/logo-alb.png" alt="" class="background-logo">
   <div class="alert">
       <div>
-        <div class="glitch title" data-glitch="Atentie!">
-          Atenție!
-        </div>
+        <div class="glitch title" data-glitch="Atentie!">Atenție!</div>
         <h2 class="subtitle">Accesul la acest site este interzis persoanelor care nu fac parte din cadrul instituției.
-      <br>Doar personalul autorizat are permisiunea să vizualizeze acest conținut.</h2>
+                             <br>Doar personalul autorizat are permisiunea să vizualizeze acest conținut.</h2>
       </div>
       <div>
         <p>Bine ați venit în Archive of Gherla Cryptids A.G.C., arhiva oficială destinată exclusiv personalului autorizat al instituției. 
@@ -50,5 +56,6 @@
   </div>
   <div class="noise"></div>
 </body>
-<script src="script.js"></script>
+<script src="scripts/script.js"></script>
+<script src="scripts/login.js"></script>
 </html>

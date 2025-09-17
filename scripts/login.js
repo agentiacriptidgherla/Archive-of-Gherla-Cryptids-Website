@@ -14,42 +14,6 @@ async function validateHash(input, expectedHash) {
     return computedHash === expectedHash; // Compare the computed hash with the expected hash
 }
 
-function clampBuilder( minWidthPx, maxWidthPx, minFontSize, maxFontSize ) {
-  const root = document.querySelector( "html" );
-  const pixelsPerRem = Number( getComputedStyle( root ).fontSize.slice( 0,-2 ) );
-
-  const minWidth = minWidthPx / pixelsPerRem;
-  const maxWidth = maxWidthPx / pixelsPerRem;
-
-  const slope = ( maxFontSize - minFontSize ) / ( maxWidth - minWidth );
-  const yAxisIntersection = -minWidth * slope + minFontSize
-
-  return `clamp( ${ minFontSize }rem, ${ yAxisIntersection }rem + ${ slope * 100 }vw, ${ maxFontSize }rem )`;
-}
-
-let logo = document.querySelector( ".logo" );
-let navLinks = document.querySelectorAll( ".navbar a" );
-
-logo.addEventListener( "click", () => {
-    if ( window.innerWidth < 800 ) {
-        navLinks.forEach( link => {
-            link.classList.toggle( "hidden" );
-        });
-    }
-});
-addEventListener( "resize", () => {
-    if ( window.innerWidth >= 800 ) {
-        navLinks.forEach( link => {
-            link.classList.remove( "hidden" );
-        });
-    }
-    else {
-        navLinks.forEach( link => {
-            link.classList.add( "hidden" );
-        });
-    }
-});
-
 // Show modal on login button click
 document.querySelector('.login-button').onclick = function() {
   const modal = document.getElementById('retroModal');
@@ -78,8 +42,6 @@ window.onclick = function(event) {
 
 let title = document.querySelector('.title');
 let subtitle = document.querySelector('.subtitle');
-
-
 function validateForm() {
   let utilizator = document.forms["myForm"]["username"].value;
   let parola = document.forms["myForm"]["password"].value;
@@ -124,7 +86,6 @@ else {
   title.setAttribute("data-glitch", "Atenție!");
   subtitle.innerHTML = "Accesul la acest site este interzis persoanelor care nu fac parte din cadrul instituției.<br>Doar personalul autorizat are permisiunea să vizualizeze acest conținut.";
 }
-
 
 linkCheck = () => {
   if(localStorage.getItem('access') === "false") {
