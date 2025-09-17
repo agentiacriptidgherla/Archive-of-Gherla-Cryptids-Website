@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6DK4Y5Z3B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z6DK4Y5Z3B');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../assets/logo-alb.png" type="image/x-icon">
+  <title>Archive of Gherla Cryptids</title>
+</head>
+<body>
+  <div class="navbar">
+      <img src="../assets/gif-negru.gif" alt="COD SECRET AICIA" class="logo">
+      <div class="links">
+          <a href="../index.html">Meniu principal</a>
+          <a href="./database.html">Bază de date</a>
+          <a href="#">Raportare Cryptid</a>
+          <a href="./personnel.html">Listă Personal</a>
+      </div>
+      <a href="./contact.html">Contact</a>
+  </div>
+  <img src="../assets/logo-alb.png" alt="" class="background-logo">
+      <div class="alert">
+        <div class="glitch title" data-glitch="Raportare Cryptid">
+          Raportare Cryptid
+          <h2 class="subtitle">Raportați orice activitate criptică imediat!</h2>
+        </div>
+        <div>
+          <p>În atenția personalului autorizat,
+          <br>pentru raportarea unui criptid este necesar sa completați următorul raport cu date cât mai exacte și cât mai recente, printre care: Denumirea criptidului, tipul acestuia, statusul său actual, nivelul de risc aproximativ, o scurtă descriere a trăsăturilor acestuia și a posibilelor incidente în care a fost implicat, locația unde a fost văzut ultima dată, o imagine pentru a putea fi identificat și emailul dumneavoastră în cazul în care vă vom contacta în legătură cu informații suplimentare legate de criptid. 
+          <br>ATENȚIE: Activitatea de observare a criptiților poate fi foarte riscantă. Asigurați-vă că ați luat măsurile de protecție în conformitate cu cel mai actual ghid al Instituției și nu vă puneți viața în pericol pentru colectarea informațiilor.</p>
+        </div>
+      </div>
+  <div class="report-modal">
+    <form method="POST" class="report-form gform" id="reportForm"
+    action="https://script.google.com/macros/s/AKfycbzQfVxCtIQVhzj4mKmw74s9oUFp0Iasiz-Gxbd2HQvNO5tepvdIzQe2DU-nVYvFN7wtoA/exec">
+      <div>
+        <span class="retro-close" onclick="closeReportForm()">&times;</span>
+        <label for="denumire">Denumire Criptid:</label>
+        <input type="text" id="denumire" name="denumire" required>
+        <label for="tip">Tip Criptid:</label>
+        <select name="tip" id="tip">
+          <option value="persoana">Persoană</option>
+          <option value="obiect">Obiect</option>
+          <option value="eveniment">Eveniment</option>
+        </select>
+        <fieldset>
+          <legend>Status:</legend>
+          <input type="radio" id="activ" name="status" value="activ" checked />
+          <label for="activ">Activ</label>
+          <input type="radio" id="inactiv" name="status" value="inactiv" />
+          <label for="inactiv">Inactiv</label>
+          <input type="radio" id="necunoscut" name="status" value="necunoscut" />
+          <label for="necunoscut">Necunoscut</label>
+        </fieldset>
+        <label for="risc">Nivelul de risc: </label>
+        <input type="range" id="risc" name="risc" min="0" max="4"/>
+        <label for="descriere">Descriere Criptid:</label>
+        <textarea id="descriere" name="descriere" required></textarea>
+      </div>  
+      <div>
+        <label for="incident">Incident:</label>
+        <input type="text" id="incident" name="incident"></input>
+        <label for="descriere-incident">Descriere Incident:</label>
+        <textarea id="descriere-incident" name="descriere-incident"></textarea>
+        <label for="locatie">Locație:</label>
+        <input type="text" id="locatie" name="locatie" required></input>
+        <label for="informator">Email informator:</label>
+        <input type="email" id="informator" name="informator" required></input>
+          <button type="submit" class="retro-submit">Trimite Raport</button>
+      </div>
+    </form>
+  </div>
+  <div class="confirmation-modal">
+    <span class="retro-close" onclick="closeConfirmModal()">&times;</span>
+    <h2 class="confirmation-text">Îți mulțumim pentru raport, continuă să aduni informații respectând normele instituției și fără să te supui riscurilor inutile. 
+    <br>Și nu uita: AGC este prietenul tău!</h2>
+  </div>
+  <button id="reportButton" class="show-report-form-btn" onclick="openReportForm()">Raport</button>
+  <div class="noise"></div>
+  <script data-cfasync="false" type="text/javascript" src="../scripts/form-submission-handler.js"></script>
+</body>
+<script src="../scripts/script.js"></script>
+<script src="../scripts/report.js"></script>
+</html>
